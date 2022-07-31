@@ -1,17 +1,23 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { HeartIcon, MenuAlt2Icon, MenuAlt3Icon, MenuIcon, SearchIcon, ShoppingBagIcon, UserIcon} from '@heroicons/react/outline'
+import LeftSidebar from './LeftSidebar';
+import RightSidebar from './RightSidebar';
 
 
 
 export default function Navigation() {
-  const [clientWindowHeight, setClientWindowHeight] = useState("")
-  const [screenHeight, setScreenHeight]= useState("")
-  const [progressScrollbar, setProgressScrollbar] = useState(0.2)
+
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+  const [screenHeight, setScreenHeight]= useState("");
+  const [progressScrollbar, setProgressScrollbar] = useState(0.2);
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(30);
   const [boxShadow, setBoxShadow] = useState(0);
-  const [pageHeight , setPageHeight] = useState(0)
+  const [pageHeight , setPageHeight] = useState(0);
+  const [leftSidebar, setLeftSidebar] = useState(false);
+  const [rightSidebar, setRightSidebar] = useState(false);
+  const [topNavbar, setTopNavbar] = useState(false);
 
   const handleScroll = ()=>{
     setClientWindowHeight(window.scrollY)
@@ -49,10 +55,8 @@ export default function Navigation() {
     }
   }, [clientWindowHeight]);
 
-  console.log(screenHeight)
-
   return (
-    <div className='w-screen fixed z-50'>
+    <div className='w-screen fixed z-40'>
       <div className='bg-black'>
       <div style={{
         borderRadius : '40px',
@@ -66,7 +70,7 @@ export default function Navigation() {
             <h1 className='text-white self-center'>GANGSTER LEGACY</h1>
           </div>
           <div className='self-center mr-6 px-2 py-2 active:bg-gray-800 rounded-full sm:hidden'>
-            <MenuIcon className='text-white h-6 w-6 lg:hover:cursor-pointer'/>
+            <MenuIcon className='text-white h-6 w-6 lg:hover:cursor-pointer'></MenuIcon>
           </div>
           <div className='hidden sm:flex sm:space-x-3 md:space-x-5  self-center mr-8 '>
             <SearchIcon className='text-white h-6 w-6 lg:hover:cursor-pointer'/>
@@ -76,13 +80,17 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-        <div className='w-screen py-3 px-8 flex justify-between' style={{
+        <div className={`${leftSidebar || rightSidebar || topNavbar ? 'hidden' : 'flex'} w-screen py-3 px-8 justify-between absolute`} style={{
           background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
           padding: `${padding}px 0px`,
           boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
         }}>
-          <div className='md:hidden mx-6 active:bg-gray-800 px-2 py-2 rounded-full transition transition-duration-800 ease-out'>
-            <MenuAlt2Icon className='text-white h-6 w-6 lg:hover:cursor-pointer ' />
+          <div 
+          onClick={()=> setLeftSidebar(true)}
+          className='md:hidden mx-6 active:bg-gray-800 px-2 py-2 rounded-full transition transition-duration-800 ease-out'>
+            <MenuAlt2Icon className={`
+            ${clientWindowHeight<135 ? 'text-white' : `rgba(0,0,0, ${backgroundTransparacy})`}
+            h-6 w-6 lg:hover:cursor-pointer ${leftSidebar && 'hidden'}`}/>
           </div>
           <div className='hidden md:flex md:space-x-5 ml-8'>
             <p className='text-sm cursor-pointer' style={{color:`${clientWindowHeight<135 ? 'rgba(255,255,255)' : `rgba(0,0,0, ${backgroundTransparacy})`}`}}>All</p>
@@ -90,8 +98,10 @@ export default function Navigation() {
             <p className='text-sm cursor-pointer' style={{color:`${clientWindowHeight<135 ? 'rgba(255,255,255)' : `rgba(0,0,0, ${backgroundTransparacy})`}`}}>Collections</p>
             <p className='text-sm cursor-pointer' style={{color:`${clientWindowHeight<135 ? 'rgba(255,255,255)' : `rgba(0,0,0, ${backgroundTransparacy})`}`}}>Trending</p>     
           </div>     
-          <div className='md:hidden mx-6 active:bg-gray-800 px-2 py-2 rounded-full transition transition-duration-800 ease-out'>
-            <MenuAlt3Icon className='text-white h-6 w-6 lg:hover:cursor-pointer' />
+          <div 
+          onClick={()=>setRightSidebar(true)}
+          className='md:hidden mx-6 active:bg-gray-800 px-2 py-2 rounded-full transition transition-duration-800 ease-out'>
+            <MenuAlt3Icon className={`${clientWindowHeight<135 ? 'text-white' : `rgba(0,0,0, ${backgroundTransparacy})`} h-6 w-6 lg:hover:cursor-pointer`  } />
           </div>
           <div className='hidden md:flex md:space-x-3 lg:space-x-8 mr-8'>
             <p className='text-sm cursor-pointer' style={{color:`${clientWindowHeight<135 ? 'rgba(255,255,255)' : `rgba(0,0,0, ${backgroundTransparacy})`}`}}>Clothing</p>
@@ -101,6 +111,8 @@ export default function Navigation() {
             <p className='text-sm cursor-pointer' style={{color:`${clientWindowHeight<135 ? 'rgba(255,255,255)' : `rgba(0,0,0, ${backgroundTransparacy})`}`}}>Accessories</p>    
           </div>
         </div>
+        <LeftSidebar isOpen={leftSidebar} setLeftSidebar={setLeftSidebar} />
+        <RightSidebar isOpen={rightSidebar} setRightSidebar={setRightSidebar}/>
     </div>
   )
 }

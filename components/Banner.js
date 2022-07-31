@@ -9,7 +9,7 @@ export default function Banner() {
         <p className='text-xs text-gray-200 font-extralight py-2 tracking-wide w-full lg:w-[450px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, </p>
     
         <button className=' px-16 py-1 border border-white rounded-sm text-white text-sm mt-10
-        lg:hover:bg-white lg:hover:text-black lg:hover:border-white transition transition-duration-3000 ease-in-out
+        lg:hover:bg-white lg:hover:text-black lg:hover:border-white transition duration-500 ease-out
         active:scale-95 active:text-black active:bg-white active:border-white'>SHOP NOW</button>
       </div>
       <div className='hidden lg:inline lg:absolute lg:bottom-0 lg:right-0'>
