@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { HeartIcon, MenuAlt2Icon, MenuAlt3Icon, MenuIcon, SearchIcon, ShoppingBagIcon, UserIcon} from '@heroicons/react/outline'
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
+import TopNavbar from './TopNavbar';
 
 
 
@@ -56,6 +57,8 @@ export default function Navigation() {
   }, [clientWindowHeight]);
 
   return (
+    <>
+    <TopNavbar isOpen={topNavbar} setTopNavbar={setTopNavbar}/>
     <div className='w-screen fixed z-40'>
       <div className='bg-black'>
       <div style={{
@@ -70,7 +73,7 @@ export default function Navigation() {
             <h1 className='text-white self-center'>GANGSTER LEGACY</h1>
           </div>
           <div className='self-center mr-6 px-2 py-2 active:bg-gray-800 rounded-full sm:hidden'>
-            <MenuIcon className='text-white h-6 w-6 lg:hover:cursor-pointer'></MenuIcon>
+            <MenuIcon onClick={()=>setTopNavbar(true)} className='text-white h-6 w-6 lg:hover:cursor-pointer'></MenuIcon>
           </div>
           <div className='hidden sm:flex sm:space-x-3 md:space-x-5  self-center mr-8 '>
             <SearchIcon className='text-white h-6 w-6 lg:hover:cursor-pointer'/>
@@ -114,6 +117,7 @@ export default function Navigation() {
         <LeftSidebar isOpen={leftSidebar} setLeftSidebar={setLeftSidebar} />
         <RightSidebar isOpen={rightSidebar} setRightSidebar={setRightSidebar}/>
     </div>
+    </>
   )
 }
 

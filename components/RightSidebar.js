@@ -7,7 +7,7 @@ export default function RightSidebar({isOpen, setRightSidebar}) {
       <div className=''>
         <XIcon className='h-6 w-6 text-right left-3 top-3 absolute' onClick={()=> setRightSidebar(false)}/>
       </div>
-      <ul className='my-10 mx-9 text-center'>
+      <ul className='my-10 mx-12 text-center'>
         <li className='py-2 my-4 text-sm font-light'>CLOTHING</li>
         <li className='py-2 my-4 text-sm font-light'>SHOES</li>
         <li className='py-2 my-4 text-sm font-light'>HATS</li>
