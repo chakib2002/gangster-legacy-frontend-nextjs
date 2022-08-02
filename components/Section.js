@@ -20,7 +20,7 @@ export default function Section() {
             <h1 className=' tracking-widest text-lg'>RESORT 2023</h1>
             <p className='text-gray-600 text-xs tracking-widest'>Timeless swim separates to mix and match</p>
             <button className='bg-white shadow-sm border border-black rounded-full px-8 py-2 text-sm my-3
-            active:scale-95 hover:bg-black hover:text-white transition duration-200 ease-out'>SHOP NOW</button>
+            active:scale-95 hover:bg-black hover:text-white transition duration-300 ease-out'>SHOP NOW</button>
           </div>
         </div>
 

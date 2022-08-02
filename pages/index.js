@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
+import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import Section from "../components/Section";
 
@@ -12,6 +13,7 @@ export default function Home({data}) {
       <Banner />
       <Cards data={data}/>
       <Section />
+      <Footer />
     </div>
   )
 }
