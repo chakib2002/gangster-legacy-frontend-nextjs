@@ -8,7 +8,7 @@ export default function Section() {
         <Image className='object-contain absolute' width='1600' height='1481' layout='responsive' src='/SectionPhoto.jpg' alt='Photo of the section component'/>
         <div className='absolute top-[35%] text-center mx-auto w-full'>
           <h1 className=' tracking-widest text-lg text-white'>RESORT 2023</h1>
-          <p className='text-white text-xs tracking-widest'>Timeless swim separates to mix and match</p>
+          <p className='text-white text-xs tracking-widest mx-3'>Timeless swim separates to mix and match</p>
           <button className='bg-transparent shadow-sm border border-white text-white rounded-full px-8 py-2 text-sm my-3
           active:scale-95 active:bg-white active:text-black transition duration-200 ease-out'>SHOP NOW</button>
         </div>

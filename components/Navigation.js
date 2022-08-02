@@ -68,7 +68,7 @@ export default function Navigation() {
         width : `${progressScrollbar}%`, 
         height:'4px'}}></div>
         <div className='flex justify-between '>
-          <div className='flex lg:hover:cursor-pointer active:scale-95 transition transition-duration-3000 ease-out'>
+          <div className='flex lg:hover:cursor-pointer active:scale-95 transition duration-300 ease-out'>
             <Image src="/BrandLogo.png" alt='brand logo' width="80" height="80" layout='fixed'/>
             <h1 className='text-white self-center'>GANGSTER LEGACY</h1>
           </div>
