@@ -9,14 +9,14 @@ export default function LeftSidebar({isOpen, setLeftSidebar}) {
       </div>
       <h1 className='mt-5 ml-4 text-sm'>OPTIONS :</h1>
       <ul className='mx-3 ml-4'>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>ALL</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>NEW ARRIVALS</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>COLLECTIONS</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>TRENDS</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full active:bg-gray-200 pr-20 text-xs 
+          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin'>ALL</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full active:bg-gray-200 pr-20 text-xs 
+          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin'>NEW ARRIVALS</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full active:bg-gray-200 pr-20 text-xs 
+          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin'>COLLECTIONS</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full active:bg-gray-200 pr-20 text-xs 
+          active:scale-95 transition duration-300 ease-out cursor-pointer font-thin'>TRENDS</li>
       </ul>
     </div>
   )

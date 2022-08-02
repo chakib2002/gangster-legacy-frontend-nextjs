@@ -11,16 +11,16 @@ export default function RightSidebar({isOpen, setRightSidebar}) {
       </div>
       <h1 className='mt-5 ml-4 text-sm'>CATEGORIES :</h1>
       <ul className='mx-3 ml-4 '>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>CLOTHING</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>SHOES</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>HATS</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>COATS</li>
-        <li className='py-2 my-4 border-l border-gray-700 px-1 w-full bg-gray-200 pr-20 text-xs 
-        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-600 active:text-white'>ACCESSORIES</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full pr-20 text-xs 
+        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-200'>CLOTHING</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full pr-20 text-xs 
+        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-200'>SHOES</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full pr-20 text-xs 
+        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-200'>HATS</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full pr-20 text-xs 
+        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-200'>COATS</li>
+        <li className='py-1 my-4 border-l border-gray-700 px-1 w-full pr-20 text-xs 
+        active:scale-95 transition duration-300 ease-out cursor-pointer font-thin active:bg-gray-200'>ACCESSORIES</li>
       </ul>
     </div>
   )
